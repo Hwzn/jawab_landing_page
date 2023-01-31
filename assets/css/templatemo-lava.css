@@ -27,6 +27,7 @@ font & reset css
 --------------------------------------------- 
 */
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap');
 /* 
 ---------------------------------------------
 reset
@@ -75,10 +76,11 @@ header, nav, section, article, aside, footer, hgroup {
 
 * {
   box-sizing: border-box;
+  font-family: 'Cairo', sans-serif !important;
 }
 
 html, body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Cairo', sans-serif !important;
   font-weight: 400;
   font-size: 16px;
   -ms-text-size-adjust: 100%;
@@ -112,7 +114,7 @@ global styles
 */
 html,
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Cairo', sans-serif !important;
   position: relative;
 }
 
@@ -305,6 +307,7 @@ welcome
   background-size: cover;
   position: relative;
   overflow: hidden;
+  direction: rtl;
 }
 .overload{
   position: absolute;
@@ -313,21 +316,21 @@ welcome
   background-position: center;
   background-size: cover;
   z-index: -1;
-  opacity: .3;
+  opacity: .1;
   width: 100%;
   height: 100%;
 }
 .welcome-area .imageone{
-  width: 473px;
-    height: 629px;
-  top: 10%;
+  width: 500px;
+  height: 725px;
+  top: 0%;
   position: absolute;
-  right: 90px;
-  transform: rotate(35deg);
-  -webkit-transform: rotate(35deg);
-  -moz-transform: rotate(35deg);
-  -ms-transform: rotate(35deg);
-  -o-transform: rotate(35deg);
+  left: 90px;
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
 }
 .imageone img{
   width: 100%;
@@ -339,7 +342,8 @@ welcome
   -o-border-radius: 25px;
 }
 
-.welcome-area .header-text .left-text {
+
+.welcome-area .header-text .right-text {
   position: relative;
   align-self: center;
   margin-top: 35%;
@@ -349,10 +353,7 @@ welcome
 .welcome-area .header-text h1 {
   font-weight: 900;
   font-size: 52px;
-  line-height: 80px;
-  letter-spacing: 1px;
-  margin-bottom: 30px;
-  color: #191a20;
+  text-align: right;
 }
 
 .welcome-area .header-text h1 em {
@@ -360,7 +361,22 @@ welcome
   color: #fba70b;
   display: block;
 }
-
+.welcome-area .header-text p{
+  font-size: 20px;
+  color: #191a20;
+  font-weight: 900;
+  text-align: right;
+  margin: 30px 0px;
+}
+.welcome-area .header-text span{
+  margin-bottom: 30px;
+  width: 100%;
+  display: block;
+  text-align: right;
+  color: #484848;
+  font-size: 18px;
+  font-weight: 600;
+}
 @media (max-width: 1420px) {
   .welcome-area .header-text {
     width: 70%;
@@ -369,9 +385,6 @@ welcome
 }
 
 @media (max-width: 1320px) {
-  .welcome-area .header-text .left-text {
-    margin-top: 50%;
-  }
   .welcome-area .header-text {
     width: 50%;
     margin-left: 5%;
@@ -399,6 +412,8 @@ welcome
     width: 100%;
   }
 }
+
+
 @media (max-width: 810px) {
 
   .welcome-area .header-text {
@@ -411,20 +426,44 @@ welcome
     padding-right: 0px;
   }
 }
+
+
+@media (max-width: 576px) {
+  .welcome-area .imageone{
+    width: 380px;
+    height: 600px;
+    top: 0%;
+    position: absolute;
+    left: 0px;  
+  }
+
+}
+
+@media (max-width: 400px) {
+
+  .welcome-area .header-text .right-text {
+    margin-top: 100%;
+  }
+}
 .donlwad{
   display: flex;
+  margin-top: 30px;
 
 }
 .donlwad  a{
-  width: 170px;
+  width: 132px;
     height: 48px;
-    margin: 0px 5px;
+}
+.donlwad  a:last-child{
+margin-right: 25px;
 }
 .donlwad a img{
 width: 100%;
 height: 100%;
 
   }
+  
+
 /*
 ---------------------------------------------
 about
@@ -926,4 +965,85 @@ preloader
   100% {
     opacity: 0;
   }
+}
+
+.data .container{
+  border-top: 1px solid rgba(175, 175, 175, 0.2);
+  border-bottom: 1px solid rgba(175, 175, 175, 0.2);
+}
+.data_contact{
+  width: 100%;
+  padding: 125px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.data_contact h5{
+  font-size: 32px;
+  color: #191a20;
+  font-weight: 900;
+
+}
+.data_contact p{
+  margin: 40px 0px;
+  color: #888;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+
+.data_contact ul{
+  display: flex;
+}
+
+.data_contact ul li{
+  width: 40px;
+  height: 40px;
+}
+.data_contact ul li:nth-child(2){
+  margin: 0px 20px;
+}
+.data_contact ul li a{
+  width: 40px;
+  height: 40px;
+}
+.data_contact ul li a img{
+  width: 40px;
+  height: 40px;
+}
+
+.data-footer{
+  width: 100%;
+  padding: 125px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.data-footer_contact{
+  text-align: center;
+}
+.data-footer_contact h5{
+  font-size: 32px;
+  color: #191a20;
+  font-weight: 900;
+
+}
+.data-footer_contact p{
+  margin: 40px auto;
+  color: #888;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2;
+  width: 600px;
+}
+
+@media (max-width: 991px) {
+  
+.data-footer_contact p{
+  width: 90%;
+}
+
 }
